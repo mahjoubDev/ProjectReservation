@@ -26,6 +26,19 @@ public class UserInfo {
 	 */
 	public UserInfo() {
 	}
+	
+	
+
+	public UserInfo(String firstName, String lastName, String email,
+			List<String> roles) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.roles = roles;
+	}
+
+
 
 	public String getFirstName() {
 		return firstName;

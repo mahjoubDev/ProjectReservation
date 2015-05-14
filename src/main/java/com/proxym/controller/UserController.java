@@ -26,7 +26,7 @@ import com.wordnik.swagger.annotations.ApiOperation;
 @Api(basePath = "/proxym", value = "User", description = "Operations with Users", produces = "application/json")
 @RestController
 @RequestMapping("/proxym/user")
-public class UserController {
+public class UserController extends AbstractRestHandler {
 	/**
 	 * {@link UserService}
 	 */
@@ -46,7 +46,7 @@ public class UserController {
 	 * @throws Exception 
 	 */
 	@RequestMapping(value="/account",method=RequestMethod.GET,produces = "application/json")
-	@ApiOperation(value = "Get cuurent user information", notes = "Get cuurent user information")
+	@ApiOperation(value = "Get current user informations", notes = "Get current user informations")
 	public UserInfo getAccount () throws Exception  {
 		User user = userService.getUserCurrent() ;
 		UserInfo userInfo =new UserInfo();
