@@ -1,5 +1,6 @@
 package com.proxym.service;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -79,10 +80,11 @@ public class UserServiceImpl implements UserService {
 
 	}
 
-	public List<Membership> getRoles() throws Exception {
+	public List<String> getRoles() throws Exception {
 
 		User portletUser = null;
 		List<Membership> memberships = null ;
+		List<String> roles = new ArrayList<>() ;
 		
 		PortalRequestContext portalRequestContext = PortalRequestContext
 				.getCurrentInstance();
@@ -97,8 +99,15 @@ public class UserServiceImpl implements UserService {
 			Collection membership = organizationService.getMembershipHandler()
 					.findMembershipsByUser(remoteUserName);
 			memberships = (List<Membership>) membership;
+			for(Membership membership2 :memberships) {
+				String [] mem = membership2.getGroupId().split("/");
+				roles.add(mem[mem.length-1]);
+
+			}
 		}
+		System.out.println("****************" + roles);
 		
-		return memberships;
+		return roles;
 	}
+	
 }

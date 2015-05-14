@@ -10,6 +10,6 @@ public interface UserService {
 	
 	
 	public User getUserCurrent() throws Exception;
-	public List<Membership> getRoles() throws Exception ;
+	public List<String> getRoles() throws Exception ;
 
 }

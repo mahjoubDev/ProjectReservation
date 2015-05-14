@@ -53,15 +53,10 @@ public class UserController {
 		userInfo.setFirstName(user.getFirstName());
 		userInfo.setLastName(user.getLastName());
 		userInfo.setEmail(user.getEmail());
+		userInfo.setRoles(userService.getRoles());
 		
 		return userInfo ;
 		
-	}
-	
-	@RequestMapping(value="/roles",method=RequestMethod.GET,produces = "application/json")
-	@ApiOperation(value = "Get cuurent user information", notes = "Get cuurent user information")
-	public  List<Membership> getuserRoles () throws Exception {
-		 return userService.getRoles();
 	}
  
 }
