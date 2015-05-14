@@ -242,24 +242,24 @@
 			<scope>compile</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.9.11</version>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.codehaus.jackson</groupId> -->
+<!-- 			<artifactId>jackson-mapper-asl</artifactId> -->
+<!-- 			<version>1.9.11</version> -->
+<!-- 		</dependency> -->
 
-		 <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.2.3</version>
-        </dependency>
+<!-- 		 <dependency> -->
+<!--             <groupId>com.fasterxml.jackson.core</groupId> -->
+<!--             <artifactId>jackson-databind</artifactId> -->
+<!--             <version>2.2.3</version> -->
+<!--         </dependency> -->
 
-		<dependency>
-			<groupId>org.exoplatform.social</groupId>
-			<artifactId>exo.social.component.core</artifactId>
-			<version>1.2.6</version>
-			<scope>provided</scope>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.exoplatform.social</groupId> -->
+<!-- 			<artifactId>exo.social.component.core</artifactId> -->
+<!-- 			<version>1.2.6</version> -->
+<!-- 			<scope>provided</scope> -->
+<!-- 		</dependency> -->
 
 		<dependency>
 			<groupId>org.exoplatform.ecms</groupId>
