@@ -148,4 +148,16 @@ public class ReservationServiceImpl implements ReservationService {
 		return reservationRepository.getReservationListBeforFiftyMinutes();
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see com.proxym.service.ReservationService#findAll()
+	 */
+	@Override
+	public List<Reservation> findByResource(String refrenceResource)
+			throws GestionResourceException {
+		
+		LOGGER.debug("Get the reservations by resource");
+		return reservationRepository.findByResource(refrenceResource);
+	}
+
 }

@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import com.proxym.business.ReservationInfo;
 import com.proxym.domain.Reservation;
 import com.proxym.exception.GestionResourceException;
 
@@ -58,5 +59,15 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
 	 */
 	@Query(nativeQuery=true,value= GET_RESERVATION_WITH_ONLY_15_MINUTES_REMAINING)
 	public List<Reservation> getReservationListBeforFiftyMinutes() throws GestionResourceException ;
+	
+	/**
+	 * get the list of reservation by resources.
+	 * 
+	 * @param refrenceResource
+	 * @return
+	 * @throws GestionResourceException
+	 */
+	@Query(name="findByReferneceResource",value="SELECT r from Reservation r where r.resource.reference LIKE :reference")
+	public  List<ReservationInfo> findByResource(@Param("reference") String reference) throws GestionResourceException ;
 
 }

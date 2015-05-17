@@ -24,7 +24,7 @@ import com.proxym.business.ResourceInfo;
  * @version 1.0.
  *
  */
-@JsonIgnoreProperties({"id","user","resource"})
+//@JsonIgnoreProperties({"id","user","resource"})
 @SuppressWarnings("serial")
 @Entity
 public class Reservation implements Serializable {

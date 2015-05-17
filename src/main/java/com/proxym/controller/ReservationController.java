@@ -89,6 +89,23 @@ public class ReservationController extends AbstractRestHandler {
 	}
 	
 	/**
+	 * shows all the existing reservation in that have been added to
+	 * the system.
+	 * 
+	 * @return A <code>Collection</code> containing all the reservations.
+	 * @throws GestionResourceException indicates there is a problem.
+	 */
+	@RequestMapping(value="/{referenceResource:.+}/getList", method=RequestMethod.GET,produces="application/json")
+	@ApiOperation(value="get the list of reservation related to target resource", notes="get the list of reservation related to target resource")
+	public List<Reservation> getReservationByResource(@PathVariable String referenceResource) throws GestionResourceException {
+		
+		LOGGER.debug("get all the reservation");
+		List<Reservation> reservationInfos = reservationService.findByResource(referenceResource);
+		return reservationInfos;
+		
+	}
+	
+	/**
 	 * delete existing reservation.
 	 * 
 	 * @param reservationInfo

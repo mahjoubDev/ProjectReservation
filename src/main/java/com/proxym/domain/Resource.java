@@ -28,7 +28,7 @@ import com.proxym.enums.TypeDate;
  * @version 1.0.
  *
  */
-@JsonIgnoreProperties({"id"})
+//@JsonIgnoreProperties({"id"})
 @SuppressWarnings("serial")
 @Entity
 public class Resource implements Serializable {

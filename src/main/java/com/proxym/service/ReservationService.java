@@ -55,6 +55,15 @@ public interface ReservationService {
 	public List<ReservationInfo> findAll () throws GestionResourceException ;
 	
 	/**
+	 * Gets all the reservations related to target resources.
+	 * 
+	 * @return A <code>Collection</code> containing all
+	 * the reservations retrieved from the data base.
+	 * 
+	 * @throws GestionResourceException indicates there is a problem.
+	 */
+	public List<Reservation> findByResource (String refrenceResource) throws GestionResourceException ;
+	/**
 	 * Gets alla the reservation before 15 minutes
 	 * 
 	 * @return A <code>Collection</code> containing all

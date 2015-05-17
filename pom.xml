@@ -77,19 +77,19 @@
 
 	<dependencies>
 
-		<dependency>
-		<groupId>org.jboss.portletbridge</groupId>
-		<artifactId>portletbridge-api</artifactId>
-		<version>3.3.0.Beta2</version>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 		<groupId>org.jboss.portletbridge</groupId> -->
+<!-- 		<artifactId>portletbridge-api</artifactId> -->
+<!-- 		<version>3.3.0.Beta2</version> -->
+<!-- 		</dependency> -->
 
 
-		<dependency>
-		<groupId>org.jboss.portletbridge</groupId>
-		<artifactId>portletbridge-impl</artifactId>
-		<version>3.3.0.Beta2</version>
-		<scope>runtime</scope>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 		<groupId>org.jboss.portletbridge</groupId> -->
+<!-- 		<artifactId>portletbridge-impl</artifactId> -->
+<!-- 		<version>3.3.0.Beta2</version> -->
+<!-- 		<scope>runtime</scope> -->
+<!-- 		</dependency> -->
 
 
 		<dependency>
@@ -108,11 +108,11 @@
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
-		<!-- dependancy for spring boot data
+		<!-- dependancy for spring boot data -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-rest</artifactId>
-		</dependency>  -->
+		</dependency>  
 
 		<!-- dependancy for spring boot web -->
 		<dependency>
